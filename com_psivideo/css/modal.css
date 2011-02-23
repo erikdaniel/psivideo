@@ -1,0 +1,14 @@
+* {margin: 0; padding: 0; }
+body {color: #222;
+font-family: Georgia, serif;
+font-size: 75%;}
+
+#video { position: absolute; width: 480px; height: 390px; margin:0; background-color: #111;}
+.componentheading {display:none;}
+#poet-info { position: absolute; width 200px; left: 490px;top:20px; max-height: 400px; }
+.poet-name {font-size: 15px }
+.entrydate {font-size: 11px; color: #555; font-style: italic }
+.poem-name {font-size: 20px; }
+.bio { margin-top: 10px;}
+#cboxClose {top:0; right:0}
+.error {margin: 35% 150px; color: #fff; font-size: 18px; font-weight: bold}

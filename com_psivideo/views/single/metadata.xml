@@ -1,0 +1,11 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<metadata>
+	<view title="Single Video">
+		<message>
+			<![CDATA[Shows individual video.]]>
+		</message>
+	</view>
+	<params>
+		<param name="id" type="text" size="3" default="" label="Video ID" description="Enter the ID of the video to be displayed." />
+	</params>
+</metadata>

@@ -1,0 +1,44 @@
+#cboxClose {
+  top:0;
+  right:0;
+}
+.componentheading {
+  display:none;
+  }
+h3.psivideo-poem  {
+  font-size: 20px;
+  margin: 0;
+  margin-bottom: 3px;
+  }
+
+h4.psivideo-poet  {
+  color: #555;
+  font-style: italic;
+  margin:0 0 5px 0;
+}
+
+#psivideo_list p.vote {
+  font-size: 25px;
+  text-align: center;
+}
+a.videolink {
+  font-size: 20px;
+  border-bottom: 1px dotted;
+  }
+
+#cboxContent * {margin: 0; padding: 0; 
+color: #222;
+}
+
+
+#cboxContent #video { position: absolute; width: 480px; height: 390px; margin:0; background-color: #111;}
+#cboxContent .componentheading {display:none;}
+#cboxContent #poet-info { position: absolute; width 200px; left: 490px;top:20px; max-height: 400px; }
+#cboxContent .poet-name {font-size: 15px }
+#cboxContent .entrydate {font-size: 11px; color: #555; font-style: italic }
+#cboxContent .poem-name {font-size: 20px; }
+#cboxContent .bio { margin-top: 10px; max-height: 300px; overflow:hidden;}
+#cboxContent #cboxClose {top:0; right:0}
+#cboxContent .error {margin: 35% 150px; color: #fff; font-size: 18px; font-weight: bold}
+#cboxContent #votes { position:absolute; top: 340px; right: 0; }
+#cboxContent #votes p {font-size: 16px; text-align:right}

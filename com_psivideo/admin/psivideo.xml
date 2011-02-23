@@ -1,0 +1,69 @@
+<?xml version="1.0" encoding="utf-8"?>
+<install type="component" version="1.5.0">
+	<name>PSI Video</name>
+	<author>Erik Daniel</author>
+	<creationDate>January 2011</creationDate>
+	<copyright>(C) 2011</copyright>
+	<authorEmail>support@poetryslam.com</authorEmail>
+	<authorUrl>www.poetryslam.com</authorUrl>
+	<version>1.5.0</version>
+	<license>MIT</license>
+	<description>A component for adding, displaying and rating videos.</description>
+	<installfile>install.psivideo.php</installfile>
+	<uninstallfile>uninstall.psivideo.php</uninstallfile>
+	<install>
+		<sql>
+			<file driver="mysql" charset="utf8">install.mysql.sql</file>
+		</sql>
+	</install>
+	
+	<uninstall>
+		<sql>
+			<file driver="mysql" charset="utf8">uninstall.mysql.sql</file>
+		</sql>
+	</uninstall>
+		
+	<files>
+		<filename>controller.php</filename>
+		<filename>psivideo.html.php</filename>
+		<filename>psivideo.php</filename>
+		<filename>router.php</filename>
+		<filename>css/psivideo.css</filename>
+		<filename>css/modal.css</filename>
+		<filename>scripts/psivideo.js</filename>
+		<filename>models/single.php</filename>
+		<filename>models/form.php</filename>
+		<filename>models/vote.php</filename>
+		<filename>models/all.php</filename>
+		<filename>views/all/metadata.xml</filename>
+		<filename>views/all/view.html.php</filename>
+		<filename>views/all/tmpl/default.php</filename>
+		<filename>views/form/metadata.xml</filename>
+		<filename>views/form/view.html.php</filename>
+		<filename>views/form/tmpl/default.php</filename>
+    <filename>views/single/metadata.xml</filename>
+		<filename>views/single/view.html.php</filename>
+		<filename>views/single/tmpl/default.php</filename>
+		<filename>views/single/tmpl/default_form.php</filename>
+	</files>
+	
+	<administration>
+		<menu>Video Slam</menu>
+		<submenu>
+			<menu link="option=com_psivideo">Manage Videos</menu>
+		</submenu>
+
+		<files folder="admin">
+			<filename>install.mysql.sql</filename>
+			<filename>uninstall.mysql.sql</filename>
+			<filename>admin.psivideo.html.php</filename>
+			<filename>admin.psivideo.php</filename>
+			<filename>controller.php</filename>
+			
+			<filename>tables/vote.php</filename>
+			<filename>tables/psivideo.php</filename>
+			<filename>toolbar.psivideo.html.php</filename>
+			<filename>toolbar.psivideo.php</filename>
+		</files>
+	</administration>
+</install>
