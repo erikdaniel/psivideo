@@ -1,6 +1,6 @@
 <?php defined( '_JEXEC' ) or die( 'Restricted access' ); ?>
 
-<h2>2011 Brenda Moosey WoWPS Video Competition</h2>
+<h2>Brenda Moosey WoWPS Video Competition</h2>
 <p>Send your favorite poet to the Women of the World Poetry Slam by voting for your favorite poem today!</p>
 <p>Enter your own video <a href="index.php?option=com_psivideo&view=form">here</a>.</p>
 <?php if(count($this->list) > 0) { ?>

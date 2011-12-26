@@ -3,6 +3,9 @@ defined( '_JEXEC' ) or die( 'Restricted access' );
 
 jimport( 'joomla.application.component.controller' );
 
+
+define('PSIVIDEO_ADMIN_START_DATE', 20111226);
+
 class PsiVideoController extends JController 
 { 
 	function __construct( $default = array() )
@@ -80,11 +83,11 @@ class PsiVideoController extends JController
 		$limitstart = JRequest::getVar('limitstart', 0); 
 		
 		$db =& JFactory::getDBO(); 
-		$query = "SELECT count(*) FROM #__psivideos"; 
+		$query = "SELECT count(*) FROM #__psivideos WHERE added_date >= " . PSIVIDEO_ADMIN_START_DATE; 
 		$db->setQuery( $query ); 
 		$total = $db->loadResult(); 
 		
-		$query = "SELECT * FROM #__psivideos"; 
+		$query = "SELECT * FROM #__psivideos WHERE added_date >= " . PSIVIDEO_ADMIN_START_DATE; 
 		$db->setQuery( $query, $limitstart, $limit ); 
 		$rows = $db->loadObjectList(); 
 

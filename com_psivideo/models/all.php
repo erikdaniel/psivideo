@@ -3,6 +3,8 @@ defined( '_JEXEC' ) or die( 'Restricted access' );
 
 jimport( 'joomla.application.component.model' );
 
+define('PSIVIDEO_START_DATE', 20111225);// temporary
+
 class ModelPsivideoAll extends JModel
 {
 	var $_videos = null;
@@ -12,7 +14,8 @@ class ModelPsivideoAll extends JModel
 	{
 		if(!$this->_videos)
 		{
-			$query = "SELECT * FROM #__psivideos WHERE published = '1'";
+			$query = "SELECT * FROM #__psivideos WHERE published = '1' AND added_date > " . PSIVIDEO_START_DATE ;
+			//$query = "SELECT * FROM #__psivideos WHERE published = '1'";
 			$this->_videos = $this->_getList($query, 0, 0);
 		}
 		return $this->_videos;

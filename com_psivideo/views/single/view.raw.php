@@ -1,14 +1,12 @@
 <?php
 
 defined( '_JEXEC' ) or die( 'Restricted access' );
-define('PSIVIDEO_END_DATE', '2012-02-23');
 
 jimport('joomla.application.component.view');
 
 class PsivideoViewSingle extends JView {
 
-	function display($tpl = null)
-	{
+	function display($tpl = null) {
 		global $option, $mainframe;
 		
 		$model = &$this->getModel();
@@ -24,7 +22,7 @@ class PsivideoViewSingle extends JView {
 		
 		$video->added_date = JHTML::Date($video->added_date);
 
-	        $video->link = $this->createEmbedCode($video->link);
+    $video->link = $this->createEmbedCode($video->link);
 				
 		$pathway->addItem($review->name, '');
 		
@@ -33,18 +31,10 @@ class PsivideoViewSingle extends JView {
 		$this->assignRef('backlink', $backlink);
 		$this->assignRef('option', $option);
 		$this->assignRef('name', $user->name);
-		// TODO setup param for opening voting
-	 	$d1 = new DateTime();
-		$d2 = new DateTime(PSIVIDEO_END_DATE);	
-		$this->voting_open = ($d1 < $d2);// true;//('voting_open', true);   
+    // TODO setup param for opening voting
+    // by a date or somethign
+    $this->voting_open = true;//('voting_open', true);   
 
-		$modal = JRequest::getVar('modal', 'false'); 
-    if($modal == 'true') {
-      JHTML::stylesheet('modal.css','components/com_psivideo/css/' );
-      JRequest::setVar('tmpl','component');
-    }
-
-		
 		parent::display($tpl);
 	}
 
@@ -57,7 +47,7 @@ class PsivideoViewSingle extends JView {
       $code = $arr[count($arr) - 1];
       $code = str_replace('watch?v=', '', $code);
       $embed = '<iframe title="YouTube video player" class="youtube-player" type="text/html" width="480" height="390" src="http://youtube.com/embed/' . $code . '?rel=0" frameborder="0" allowFullScreen></iframe>';
-    }
+    } // parse vimeo
     else if(preg_match("/vimeo.com/i", $link)) {
       $arr = explode('/', $link);
       $code = $arr[count($arr) - 1];

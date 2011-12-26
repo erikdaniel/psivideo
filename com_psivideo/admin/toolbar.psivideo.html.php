@@ -11,7 +11,7 @@ class TOOLBAR_psivideo {
   }
 
   function _DEFAULT() {
-    JToolBarHelper::title( JText::_( 'Restaurant Reviews' ), 'generic.png');
+    JToolBarHelper::title( JText::_( 'Video Slam' ), 'generic.png');
     JToolBarHelper::publishList();
     JToolBarHelper::unpublishList();
     JToolBarHelper::editList();

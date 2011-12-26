@@ -16,8 +16,8 @@ function validatePsivideo(f) {
    return false;
 }
 </script>
-<h2>2011 Brenda Moosy Video Slam Submission Form</h2>
-<p>Fill out the form below. By submitting this form you agree to the <a href="http://www.poetryslam.com/index.php?option=com_content&view=article&id=213">terms and rules</a>. To prevent spam, videos are not instantly displayed, and must be approved by an administrator. We will do this as quickly as possible.  Thank you for entering, and good luck!</p>
+<h2>Brenda Moosy Video Slam Submission Form</h2>
+<p>Fill out the form below. By submitting this form you agree to the <a href="http://www.poetryslam.com/index.php?option=com_content&view=article&id=233">terms and rules</a>. <strong>To prevent spam, videos are not instantly displayed, and must be approved by an administrator. We will do this as quickly as possible.</strong>  Thank you for entering, and good luck!</p>
 <form id="psivideo-form" class="form-validate" action="index.php?option=com_psivideo" method="post" onSubmit="return validatePsivideo(this);"> 
 <input type="hidden" name="check" value="post"/>
 

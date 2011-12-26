@@ -113,6 +113,5 @@ class ModelPsivideoVote extends JModel
     $app->redirect($link, $msg);
 
   }
-
 }
 ?>

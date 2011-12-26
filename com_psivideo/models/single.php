@@ -53,7 +53,7 @@ class ModelPsivideoSingle extends JModel
 
 	function getVotesByIp( $ip, $psivideo_id) {
     $votesByIp = 0;
-    $query = "SELECT count(*) FROM #__psivideos_votes WHERE ip_address = '" . $ip . "' AND DATE_SUB(NOW(), INTERVAL 1 HOUR) <= vote_date";
+    $query = "SELECT count(*) FROM #__psivideos_votes WHERE ip_address = '" . $ip . "' AND DATE_SUB(NOW(), INTERVAL 24 HOUR) <= vote_date";
     $this->_db->setQuery($query);
     $votesByIp = $this->_db->loadResult();
 		return $votesByIp;
@@ -97,7 +97,7 @@ class ModelPsivideoSingle extends JModel
     $msg = '';
     
     if($this->getVotesByIp($row->ip_address, $video_id) > 0) {
-      $msg =  "Our records show that you already voted recently. You may only vote once per hour. Go write a poem, then come back and vote again!'";
+      $msg =  "Our records show that you already voted recently. You may only vote once per day. Go write a poem, then come back and vote again!'";
     }
     else if (!$row->store()) { 
 			echo "<script> alert('".$row->getError()."'); window.history.go(-1); </script>\n"; 
